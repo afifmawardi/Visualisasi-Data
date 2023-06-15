@@ -35,13 +35,10 @@ if st.button("Start"):
 	data_load_state = st.text('Loading data...')
 	data = load_data(selected_stock)
 	data_load_state.text('')
-    # Plot raw data
-	def plot_raw_data():
-		fig = go.Figure()
-		fig.add_trace(go.Scatter(x=data['Date'], y=data['Close'], name="saham"))
-		fig.layout.update(title_text='Saham '+selected_stock, xaxis_rangeslider_visible=True)
-		st.plotly_chart(fig)	
-	plot_raw_data()
+	fig = go.Figure()
+	fig.add_trace(go.Scatter(x=data['Date'], y=data['Close'], name="saham"))
+	fig.layout.update(title_text='Saham '+selected_stock, xaxis_rangeslider_visible=True)
+	st.plotly_chart(fig)
 	st.subheader('Historical Data')
 	st.dataframe(data)
 
