@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 START = "2013-11-19"
 END = "2023-06-15"
 
-st.set_page_config(page_title='Visualisasi Data Saham Provider Indonesia', layout="wide",
+st.set_page_config(page_title='Visualisasi Data', layout="wide",
     initial_sidebar_state="expanded",)
 
 st.title('Visualisasi Data Saham Provider Indonesia')
