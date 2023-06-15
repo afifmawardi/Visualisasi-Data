@@ -43,7 +43,7 @@ if st.button("GO"):
 		st.plotly_chart(fig)	
 	plot_raw_data()
 	st.subheader('Historical Data')
-	st.write(data.tail())
+	st.dataframe(data)
 
 st.markdown("""Dibuat Oleh:
 - Afifuddin Mawardi - 1301194113
