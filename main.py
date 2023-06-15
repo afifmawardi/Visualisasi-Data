@@ -31,7 +31,7 @@ st.text("""
 
 
 stocks = ('TLKM.JK', 'ISAT.JK', 'EXCL.JK', 'FREN.JK')
-selected_stock = st.selectbox('Pilih dataset ', stocks)
+selected_stock = st.selectbox('Pilih : ', stocks)
 
 
 @st.cache
