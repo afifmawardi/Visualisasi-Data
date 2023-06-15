@@ -15,7 +15,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 START = "2013-11-19"
-END = "2023-05-19"
+END = "2023-06-15"
 
 st.set_page_config(layout="wide")
 st.title('Visualisasi Data Saham Provider Indonesia')
@@ -31,7 +31,7 @@ def load_data(ticker):
     data.reset_index(inplace=True)
     return data
 
-if st.button("GO"):	
+if st.button("Start"):	
 	data_load_state = st.text('Loading data...')
 	data = load_data(selected_stock)
 	data_load_state.text('')
