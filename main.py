@@ -34,7 +34,7 @@ def load_data(ticker):
 if st.button("GO"):	
 	data_load_state = st.text('Loading data...')
 	data = load_data(selected_stock)
-	data_load_state.text('Loading data... done!')
+	data_load_state.text('')
     # Plot raw data
 	def plot_raw_data():
 		fig = go.Figure()
