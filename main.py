@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 START = "2013-11-19"
 END = "2023-05-19"
 
+st.set_page_config(layout="wide")
 st.title('Visualisasi Data Saham Provider Indonesia')
 st.markdown('Visualisasi 4 Perusahaan Provider di Indonesia')
 
