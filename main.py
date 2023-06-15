@@ -51,6 +51,16 @@ if st.button("Start"):
 	st.subheader('Historical Data')
 	st.text('Berikut adalah dataset saham '+selected_stock+ ' hingga tanggal 15 Juni 2023')
 	st.dataframe(data.style.highlight_max(axis=0))
+	def convert_df(df):
+		return df.to_csv().encode('utf-8')
+
+	csv = convert_df(data)
+	st.download_button(
+		label="Download data as CSV",
+		data=csv,
+		file_name=selected_stock+'.csv',
+		mime='text/csv',
+	)
 
 st.markdown("""Dibuat Oleh:
 - Afifuddin Mawardi - 1301194113
