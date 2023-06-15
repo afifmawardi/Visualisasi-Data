@@ -17,9 +17,18 @@ import matplotlib.pyplot as plt
 START = "2013-11-19"
 END = "2023-06-15"
 
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Visualisasi Data Saham Provider Indonesia', layout="wide",
+    initial_sidebar_state="expanded",)
+
 st.title('Visualisasi Data Saham Provider Indonesia')
 st.markdown('Visualisasi 4 Perusahaan Provider di Indonesia')
+st.text("""
+- PT Telekomunikasi Indonesia Tbk (TLKM.JK)
+- PT Indosat Ooredoo Hutchison Tbk (ISAT.JK)
+- PT XL Axiata Tbk (EXCL.JK)
+- PT Smartfren Telecom Tbk (FREN.JK)
+""")
+
 
 stocks = ('TLKM.JK', 'ISAT.JK', 'EXCL.JK', 'FREN.JK')
 selected_stock = st.selectbox('Pilih dataset ', stocks)
@@ -40,7 +49,8 @@ if st.button("Start"):
 	fig.layout.update(title_text='Saham '+selected_stock, xaxis_rangeslider_visible=True)
 	st.plotly_chart(fig)
 	st.subheader('Historical Data')
-	st.dataframe(data)
+	st.text('Berikut adalah dataset saham '+selected_stock+ ' hingga tanggal 15 Juni 2023')
+	st.dataframe(data.style.highlight_max(axis=0))
 
 st.markdown("""Dibuat Oleh:
 - Afifuddin Mawardi - 1301194113
